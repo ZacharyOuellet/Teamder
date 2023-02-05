@@ -1,14 +1,22 @@
 from profile import Profile
+from team import Team
 import json
 
 
-class Organisation():
-    def __init__(self,profiles: list[Profile],maxTeamSize=4):
+class Organisation:
+    def __init__(self, profiles: list[Profile], maxTeamSize=4):
         self.teams = []
-        nEquipe1moins = maxTeamSize-len(profiles) % 4
-        for i in range(len(profiles)//4):
-            self.teams.append(profiles[i*maxTeamSize:i*maxTeamSize+maxTeamSize])
-
+        nEquipe1moins = maxTeamSize - len(profiles) % maxTeamSize
+        if nEquipe1moins == maxTeamSize:
+            nEquipe1moins = 0
+            nEquipeMax = len(profiles) // maxTeamSize
+        else:
+            nEquipeMax = len(profiles) // maxTeamSize - nEquipe1moins + 1
+        for i in range(nEquipeMax):
+            self.teams.append(Team(profiles[i * maxTeamSize:i * maxTeamSize + maxTeamSize]))
+        for i in range(nEquipe1moins):
+            self.teams.append(Team(profiles[nEquipeMax * maxTeamSize + i * (maxTeamSize - 1):
+                                            nEquipeMax * maxTeamSize + i * (maxTeamSize - 1) + maxTeamSize - 1]))
 
     def orgScore(self):
         return sum([team.computeScore() for team in self.teams])
