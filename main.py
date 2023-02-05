@@ -1,4 +1,6 @@
-from profile import*
+from organisation import Organisation
+from profile import Profile
+from team import Team
 import csv
 
 
@@ -18,4 +20,10 @@ if __name__ == '__main__':
     profiles = readCSV("data.csv")
     for profile in profiles:
         print(profile)
-        
+    print("----------------------------")
+    org = Organisation()
+    for i, profile in enumerate(profiles[::4]):
+        org.teams.append(Team([*profiles[i*4:i*4+4]]))
+    org.nameTeams()
+    org.createJson()
+
