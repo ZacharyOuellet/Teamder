@@ -19,7 +19,7 @@ class Team:
     
     def computeScore(self):
         score=0
-        l=[0,0,0,0,0,0]
+        l=[]
         for member1 in self.members:
             for member2 in self.members:
                 if member1!=member2:
