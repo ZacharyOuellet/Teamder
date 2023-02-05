@@ -13,6 +13,12 @@ def readCSV(filename):
             profiles.append(Profile(*line[1:]))
     return profiles
 
+class combinaison:
+    def __iter__(self):
+        pass
+
+def optimizeTeams(orgs:Organisation):
+    maxorg = 0
 
 
 if __name__ == '__main__':

@@ -3,57 +3,15 @@ import json
 
 
 class Organisation():
-    def __init__(self):
+    def __init__(self,profiles: list[Profile],maxTeamSize=4):
         self.teams = []
+        nEquipe1moins = maxTeamSize-len(profiles) % 4
+        for i in range(len(profiles)//4):
+            self.teams.append(profiles[i*maxTeamSize:i*maxTeamSize+maxTeamSize])
 
-    # def createTeams(self, profiles: list[Profile], maxTeamSize):
-        # french = []
-        # english = []
-        # bilingual = []
-        # for i in profiles:
-        #     if (i.fr == True and i.en == False):
-        #         french.append(i)
-        #     elif (i.en == True and i.fr == False):
-        #         english.append(i)
-        #     else:
-        #         bilingual.append(i)
-        #
-        # frenchGoal = []
-        # englishGoal = []
-        # bilingualGoal = []
-        #
-        # frenchNoGoal = []
-        # englishNoGoal = []
-        # bilingualNoGoal = []
-        #
-        # for j in french:
-        #     if j.goal == True:
-        #         frenchGoal.append(j)
-        #     else j.goal == False:
-        #         frenchNoGoal.append(j)
-        #
-        # for j in english:
-        #     if j.goal == True:
-        #         englishGoal.append(j);
-        #     else j.goal == False:
-        #         englishNoGoal.append(j);
-        #
-        # for j in bilingual:
-        #     if j.goal == True:
-        #         bilingualGoal.append(j);
-        #     else j.goal == False:
-        #         bilingualNoGoal.append(j);
-        # # mettre un mutliple de 4 pour les personnes anglophones
-        # rest = englishGoal % 4;
-        # englishGoal += bilingualGoal[i
-        # for i in rest];
-        # del bilingualGoal[i
-        # for i in rest];
-        # rest = englishNoGoal % 4;
-        # englishNoGoal += bilingualNoGoal[i
-        # for i in rest];
-        # del bilingualNoGoal[i
-        # for i in rest];
+
+    def orgScore(self):
+        return sum([team.computeScore() for team in self.teams])
 
     def nameTeams(self):
         for i, team in enumerate(self.teams):
