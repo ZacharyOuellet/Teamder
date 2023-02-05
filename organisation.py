@@ -31,7 +31,7 @@ class Organisation:
             members = []
             for member in team.members:
                 members.append(member.name)
-            teams.append({"name": team.name, "members": members})
+            teams.append({"name": team.name, "members": members, "score":team.computeScore()})
         with open("teams.json", "w") as f:
             json.dump(teams, f)
 

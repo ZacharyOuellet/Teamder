@@ -58,5 +58,5 @@ class Team:
         if standardDeviation<=0.1:
             standardDeviation = 0.1
         score+=5/standardDeviation
-
+        score-= -78.64626131895065  # moyenne
         return score
