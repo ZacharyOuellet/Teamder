@@ -55,6 +55,8 @@ class Team:
         for i in range(6):
             sum+=(l[i]-mean)**2
         standardDeviation=(sum/5)**(1/2)
+        if standardDeviation<=0.1:
+            standardDeviation = 0.1
         score+=5/standardDeviation
 
         return score
