@@ -10,7 +10,7 @@ class Profile:
                 self.level = level+1
                 break
         self.progLang = args[4].split(",")
-        self.algo, self.backend, self.frontend, self.dataScience, self.ml, self.cybersecurity = args[5:11]
+        self.algo, self.backend, self.frontend, self.dataScience, self.ml, self.cybersecurity = [int(x) for x in args[5:11]]
         self.goal = args[11]
         match args[12]:
             case "Oui":
