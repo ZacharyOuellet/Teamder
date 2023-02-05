@@ -10,27 +10,27 @@ class Organisation():
         french = []
         english = []
         bilingual = []
-        for i in (participants polyhx):
-            if (i.speaksFrench == True AND i.speaksEnglish == False):
-                french.append(i);
-            elif (i.speaksEnglish == True AND i.speaksFrench == False):
-                english.append(i);
+        for i in profiles:
+            if (i.fr == True and i.en == False):
+                french.append(i)
+            elif (i.en == True and i.fr == False):
+                english.append(i)
             else:
-                bilingual.append(i);
+                bilingual.append(i)
 
-        frenchGoal = [];
-        englishGoal = [];
-        bilingualGoal = [];
+        frenchGoal = []
+        englishGoal = []
+        bilingualGoal = []
 
-        frenchNoGoal = [];
-        englishNoGoal = [];
-        bilingualNoGoal = [];
+        frenchNoGoal = []
+        englishNoGoal = []
+        bilingualNoGoal = []
 
         for j in french:
             if j.goal == True:
-                frenchGoal.append(j);
+                frenchGoal.append(j)
             else j.goal == False:
-                frenchNoGoal.append(j);
+                frenchNoGoal.append(j)
 
         for j in english:
             if j.goal == True:
@@ -68,3 +68,9 @@ class Organisation():
             teams.append({"name": team.name, "members": members})
         with open("teams.json", "w") as f:
             json.dump(teams, f)
+
+    def __repr__(self):
+        result = ""
+        for team in self.teams:
+            result += str(team) + "\n"
+        return result
