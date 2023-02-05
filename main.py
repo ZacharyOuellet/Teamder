@@ -23,8 +23,8 @@ if __name__ == '__main__':
     org = Organisation()
     for i, profile in enumerate(profiles[::4]):
         org.teams.append(Team([*profiles[i*4:i*4+4]]))
+    org.nameTeams()
     for team in org.teams:
         print(f"{team.name}  : score : {team.computeScore()}")
-    org.nameTeams()
     org.createJson()
 
