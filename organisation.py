@@ -3,11 +3,8 @@ import json
 
 
 class Organisation():
-    def __init__(self,profiles: list[Profile],maxTeamSize=4):
+    def __init__(self):
         self.teams = []
-        nEquipe1moins = maxTeamSize-len(profiles) % 4
-        for i in range(len(profiles)//4):
-            self.teams.append(profiles[i*maxTeamSize:i*maxTeamSize+maxTeamSize])
 
 
     def orgScore(self):

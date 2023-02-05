@@ -19,7 +19,7 @@ class Team:
     
     def computeScore(self):
         score=0
-        l=[]
+        l=[0,0,0,0,0,0]
         for member1 in self.members:
             for member2 in self.members:
                 if member1!=member2:
@@ -37,23 +37,22 @@ class Team:
                     if member1.allNighter==member2.allNighter:
                         score+=2
                     else:
-                        score-=2
+                        score -= 2
                     if member1.level==member2.level:
-                        score+=1
+                        score += 1
                     else:
-                        score-=1
-            for i in range(len(self.members)):
-                l[0]+= member1.algo
-                l[1]+= member1.backend
-                l[2]+= member1.frontend
-                l[3]+= member1.dataScience
-                l[4]+= member1.ml
-                l[5]+= member1.cybersecurity
-            mean=(l[0]+l[1]+l[2]+l[3]+l[4]+l[5])/6
-            sum=0
-            for i in len(self.members):
-                sum+=(l[i]-mean)**2
-            standardDeviation=(sum/(len(self.members)))**(1/2)
-            score+=5/standardDeviation
+                        score -= 1
+            l[0] += member1.algo
+            l[1] += member1.backend
+            l[2] += member1.frontend
+            l[3] += member1.dataScience
+            l[4] += member1.ml
+            l[5] += member1.cybersecurity
+        mean=(l[0]+l[1]+l[2]+l[3]+l[4]+l[5])/6
+        sum=0
+        for i in range(6):
+            sum+=(l[i]-mean)**2
+        standardDeviation=(sum/5)**(1/2)
+        score+=5/standardDeviation
 
         return score
