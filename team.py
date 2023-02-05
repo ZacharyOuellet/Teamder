@@ -13,9 +13,11 @@ class Team:
         self.name = name
 
     def __repr__(self):
-        result = f"{self.__name} :\n"
+        result = f"{self.name} :\n"
         for member in self.members:
             result += f"{member.name}     "
+        return result
+
     
     def computeScore(self):
         score=0
