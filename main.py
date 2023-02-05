@@ -58,7 +58,7 @@ del bilingualNoGoal[i for i in rest];
 def note(listOfPeople):
 	score=0;
 	for i in (len(listOfPeople)-1):
-        j=i+1;
+        j=i+1
 		if i.goal==j.goal:
 			score+=5;
 		else:
