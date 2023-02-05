@@ -7,6 +7,7 @@ Horodatage,Nom complet,Âge,Langue,Niveau d'étude,Langages de programmation que
 2023-02-04 18:39:20,Charles-Francis Damedey,20,"Français, Anglais",Baccalauréat,"Python, C#, JavaScript, HTML & CSS",4,4,3,2,2,1,Gagner,Oui
 2023-02-04 18:50:04,test,15,,Autre,Java,1,1,1,1,1,1,Apprendre,Oui
 2023-02-04 19:04:51,Yolan Gingra,16,Français,Baccalauréat,"Python, Java, C++, JavaScript, HTML & CSS",3,2,2,1,1,1,Gagner,Oui
+2023-02-04 19:09:07,,,,,"Python, Java, C++, C#, JavaScript, Go, HTML & CSS",2,3,3,1,1,2,Apprendre,Oui
 2023-02-04 19:16:40,Sylvain Martel,25,Anglais,Doctorat,HTML & CSS,1,1,1,1,1,1,Gagner,Peut-être
 2023-02-04 19:19:10,Gollum's wife (aka Y.O) 😘,21,"Français, Anglais",Baccalauréat,"Python, Java, C++, C#, JavaScript, HTML & CSS",3,3,3,2,2,3,Apprendre,Peut-être
 2023-02-04 19:33:27,Stephanie Ste-marie,35,Français,Collégial,"Python, Java, C#, JavaScript, HTML & CSS",2,2,2,2,1,2,Apprendre,Oui
@@ -31,3 +32,5 @@ Horodatage,Nom complet,Âge,Langue,Niveau d'étude,Langages de programmation que
 2023-02-04 20:48:24,Antoine Gaulin,26,Français,Baccalauréat,"Python, Java, C++, C#, JavaScript, HTML & CSS",3,3,3,1,2,3,Aider,Non
 2023-02-04 21:42:23,Léo Banno-Cloutier,20,Français,Baccalauréat,"Python, Java, C++, JavaScript, Go, Rust, HTML & CSS",4,4,3,3,3,2,Apprendre,Oui
 2023-02-04 22:08:02,Matt,30,"Français, Anglais",Baccalauréat,"C#, Swift, Kotlin",3,3,4,2,2,2,Aider,Peut-être
+2023-02-05 01:05:11,Bernard Ye,19,"Français, Anglais",Baccalauréat,"Python, HTML & CSS",3,1,1,1,1,1,Apprendre,Peut-être
+2023-02-05 02:32:39,Tarek Halabi,20,Français,Baccalauréat,"Python, Java, C++, C#, JavaScript, HTML & CSS",2,2,2,2,2,2,Gagner,Oui
