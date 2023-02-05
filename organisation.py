@@ -18,7 +18,7 @@ class Organisation:
             self.teams.append(Team(profiles[nEquipeMax * maxTeamSize + i * (maxTeamSize - 1):
                                             nEquipeMax * maxTeamSize + i * (maxTeamSize - 1) + maxTeamSize - 1]))
 
-    def orgScore(self):
+    def computeScore(self):
         return sum([team.computeScore() for team in self.teams])
 
     def nameTeams(self):
