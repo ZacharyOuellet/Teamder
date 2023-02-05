@@ -19,7 +19,7 @@ class Team:
     
     def computeScore(self):
         score=0
-        l=[]
+        l=[0,0,0,0,0,0]
         for member1 in self.members:
             for member2 in self.members:
                 if member1!=member2:
@@ -42,7 +42,7 @@ class Team:
                         score+=1
                     else:
                         score-=1
-            for i in len(self.members):
+            for i in range(len(self.members)):
                 l[0]+= member1.algo
                 l[1]+= member1.backend
                 l[2]+= member1.frontend
@@ -53,7 +53,7 @@ class Team:
             sum=0
             for i in len(self.members):
                 sum+=(l[i]-mean)**2
-            standardDeviation=(sum/5)**(1/2)
+            standardDeviation=(sum/(len(self.members)))**(1/2)
             score+=5/standardDeviation
 
         return score
