@@ -31,9 +31,17 @@ class Organisation:
             members = []
             for member in team.members:
                 members.append(member.name)
-            teams.append({"name": team.name, "members": members, "score":team.computeScore()})
+            teams.append({"name": team.name, "members": members, "score": team.computeScore()})
         with open("teams.json", "w") as f:
             json.dump(teams, f)
+
+    def sortTeams(self, r = False):
+        self.teams.sort(key=lambda x: x.computeScore(), reverse=r)
+        orderedProfiles = []
+        for team in self.teams:
+            print(team.computeScore())
+            orderedProfiles.extend(team.members)
+        return orderedProfiles
 
     def __repr__(self):
         result = ""
