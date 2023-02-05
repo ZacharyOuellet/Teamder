@@ -1,2 +1,2 @@
 # Teamder
-The best team finding algorythm
+The best team finding algorithm
